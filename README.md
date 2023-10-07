@@ -1,4 +1,4 @@
-# Laravel API with JWT auth and Swagger Doc
+# Laravel 10 API with JWT auth and Swagger Doc
 
 ## API Documentation
 
