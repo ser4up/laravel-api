@@ -168,7 +168,7 @@ class PostController extends Controller
     #[OA\Delete(
         path: self::BASE_URL . "/posts/{id}",
         summary: "Delete post.",
-        description: "API endpoint for post deleting.",
+        description: "It deletes the post from the DB.",
         tags: ["posts"],
         security: [['bearerAuth' => []]],
         parameters: [
@@ -190,7 +190,7 @@ class PostController extends Controller
         description: "Post not found.",
         content: new OA\JsonContent(ref: "#/components/schemas/NotFoundError")
     )]
-    public function delete($id): JsonResponse
+    public function delete(int $id): JsonResponse
     {
         try {
             $post = Post::findOrFail($id);

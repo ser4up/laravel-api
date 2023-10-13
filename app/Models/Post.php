@@ -9,8 +9,6 @@ class Post extends Model
 {
     use HasFactory;
 
-//    protected $guarded = false;
-
     protected $fillable = [
         'title',
         'likes'
