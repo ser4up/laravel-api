@@ -29,6 +29,7 @@ use OpenApi\Attributes as OA;
     new OA\Property(property: "message", type: "string", example: "string")
 ])]
 #[OA\Schema(schema: "ValidationError", properties: [
+    new OA\Property(property: "status", type:"integer", example:422),
     new OA\Property(property: "message", type: "string", example: "string"),
     new OA\Property(property: "errors", type:"object", example:"{}")
 ])]

@@ -242,12 +242,7 @@
                             }
                         }
                     }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
+                }
             },
             "post": {
                 "tags": [
@@ -352,19 +347,14 @@
                             }
                         }
                     }
-                },
-                "security": [
-                    {
-                        "bearerAuth": []
-                    }
-                ]
+                }
             },
             "delete": {
                 "tags": [
                     "posts"
                 ],
                 "summary": "Delete post.",
-                "description": "API endpoint for post deleting.",
+                "description": "It deletes the post from the DB.",
                 "operationId": "e8bf457636aad55e305ac07826975008",
                 "parameters": [
                     {
@@ -533,6 +523,10 @@
             },
             "ValidationError": {
                 "properties": {
+                    "status": {
+                        "type": "integer",
+                        "example": 422
+                    },
                     "message": {
                         "type": "string",
                         "example": "string"

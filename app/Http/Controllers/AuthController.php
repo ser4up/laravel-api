@@ -13,11 +13,6 @@ class AuthController extends Controller
 {
     const BASE_URL = '/api/v1/auth';
 
-    public function __construct()
-    {
-        $this->middleware('auth:api', ['except' => ['signin', 'signup']]);
-    }
-
     #[OA\Post(
         path: self::BASE_URL . "/signup",
         summary: "Sign up.",

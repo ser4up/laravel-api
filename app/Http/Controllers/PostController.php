@@ -19,8 +19,7 @@ class PostController extends Controller
         path: self::BASE_URL . "/posts",
         summary: "List of posts.",
         description: "It returns a list of posts.",
-        tags: ["posts"],
-        security: [['bearerAuth' => []]]
+        tags: ["posts"]
     )]
     #[OA\Response(
         response: 200,
@@ -48,7 +47,6 @@ class PostController extends Controller
         summary: "One post.",
         description: "It returns one post.",
         tags: ["posts"],
-        security: [['bearerAuth' => []]],
         parameters: [
             new OA\Parameter(name: "id", in: "path", required: true, description: "Post id."),
         ]
